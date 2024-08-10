@@ -88,8 +88,6 @@ class ProductController extends Controller
                 return Response::res('Product not found', 404);
             }
 
-            dd($request->name);
-
             $request->validate([
                 'name' => 'required|string|max:255',
                 'price' => 'required|numeric',
